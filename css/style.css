@@ -1,0 +1,293 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0 0 64px 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header */
+header{
+  /* background: #353637; */
+  background: #000000;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #343ca5 3px solid;
+}
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+  font-family: 'Iceberg';
+}
+
+header #logo{
+  float: left;
+}
+
+header #logo h1{
+  margin: 0 0 0 10px;
+  /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #9d00ff, 0 0 30px #9d00ff; */
+  font-family: 'Iceberg';
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+header nav li a {
+  color: #343ca5;
+}
+
+header .highlight, header .current a{
+  color: #ffffff;
+  font-weight: bold;
+}
+
+header a:hover, .drop-down-content a:hover {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+li.drop-down {
+    display: inline-block;
+}
+
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #343ca5;
+    z-index: 1;
+}
+
+.drop-down-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.drop-down:hover .drop-down-content {
+    display: block;
+}
+
+.neon{
+  /* Darker: #2c3392 */
+  text-shadow:  0 0 2px #343ca5,
+          			0 0 4px #343ca5,
+                0 0 6px #343ca5,
+                0 0 8px #343ca5,
+                0 0 12px #343ca5,
+                0 0 16px #343ca5,
+                0 0 20px #343ca5,
+                0 0 24px #343ca5,
+                0 0 26px #343ca5;
+}
+
+/* Showcase */
+#showcase{
+  min-height: 400px;
+  /* TODO Find good background image */
+  background: url('../img/headerbg.jpg') no-repeat center rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+}
+
+#showcase .layer{
+  min-height: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  positon: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+.content .container {
+  margin: auto;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  color: #ffffff;
+  background-color: #343ca5;
+  text-align: center;
+}
+
+/* About Page */
+aside#sidebar{
+  float: right;
+  width: 30%;
+  padding: 25px;
+}
+
+aside#sidebar .contact input, aside#sidebar .contact textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+article#main-col{
+  float: left;
+  padding: 20px;
+  width: 65%;
+}
+
+/* Contact Page */
+ul#contact {
+  color: #ffffff;
+}
+
+ul#contact li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #343ca5;
+}
+
+ul#contact h3{
+  border-bottom: #ffffff solid 1px;
+}
+
+/* Thumbnail */
+.thumbnail-wrapper{
+  padding-bottom: 10px;
+}
+
+.thumbnail-wrapper img{
+  max-width: 75%;
+  height: auto;
+}
+
+/* Content Page */
+article.content-page h1{
+    margin-bottom: 0;
+}
+
+article.content-page .image-wrapper{
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+article.content-page .image-wrapper img{
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+article.content-page .image-wrapper span{
+  font-size: 10px;
+  color: #ccc;
+}
+
+.content-meta {
+  color: #aaa;
+  font-size: 12px !important;
+}
+
+article.content-page p{
+  font-size: 14px;
+}
+
+@media(max-width: 768px){
+  /* insert CSS code for small screen sizes here */
+  header #logo, header nav, header nav li, .content .box{
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 20px 20px;
+    font-family: 'Iceberg';
+  }
+
+  header li a {
+    margin-bottom: 20px;
+  }
+
+  header{
+    /* padding-bottom: 20px; */
+  }
+
+  #showcase h1{
+    margin-top: 40px;
+  }
+
+  /* About Page */
+  article#main-col, aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Thumbnail */
+  .thumbnail-wrapper {
+    float: none;
+    margin: auto;
+  }
+
+  /* Content Page */
+  article.content-page .image-wrapper{
+    float: none;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  article.content-page .image-wrapper img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
